@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CashFlow Pro</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f172a">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<div class="container">
+<h1>CashFlow Pro</h1>
+<div class="cards">
+<div class="card income"><small>Pemasukan</small><h2 id="incomeTotal">Rp 0</h2></div>
+<div class="card expense"><small>Pengeluaran</small><h2 id="expenseTotal">Rp 0</h2></div>
+<div class="card saving"><small>Tabungan</small><h2 id="savingTotal">Rp 0</h2></div>
+<div class="card balance"><small>Saldo</small><h2 id="balanceTotal">Rp 0</h2></div>
+</div>
+
+<div class="panel form">
+<input type="date" id="date">
+<input id="desc" placeholder="Keterangan">
+<select id="type"><option value="income">Pemasukan</option><option value="expense">Pengeluaran</option><option value="saving">Tabungan</option></select>
+<select id="payment"><option value="cash">Cash</option><option value="transfer">Transfer</option></select>
+<input type="number" id="amount" placeholder="Jumlah">
+<button id="addBtn">Tambah</button>
+</div>
+
+<div class="panel"><canvas id="trendChart"></canvas></div>
+<div class="panel"><canvas id="pieChart"></canvas></div>
+
+<div class="panel">
+<input id="search" placeholder="Cari transaksi">
+<table>
+<thead><tr><th>Tanggal</th><th>Ket</th><th>Tipe</th><th>Metode</th><th>Jumlah</th><th></th></tr></thead>
+<tbody id="txBody"></tbody>
+</table>
+</div>
+</div>
+<script src="app.js"></script>
+</body></html>
